@@ -180,7 +180,7 @@
   		AnswerType:0,//答题类型：1-练习，2-限时
   		AnswerId:0,//判断选取什么题目，id
   		AnswerVal:null,//数组下标，用于返回时隐藏‘开始答题’块；
-  		Typeimagebefore:'http://10.21.40.246'
+  		Typeimagebefore:'http://10.21.40.246'//图片前缀
   	}
   },
   beforeMount:function(){
