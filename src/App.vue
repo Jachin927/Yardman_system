@@ -5,6 +5,7 @@
       <router-link to="/Teacher"><div class="entry_box entry_teacher" @click="checkInChange()">教师入口</div></router-link>
       <router-link to="/Student"><div class="entry_box entry_student" @click="checkInChange()">学生入口</div></router-link>
       <div class="footer">&copy;牧码人社团 2018</div>
+      <div id="usedata">用户人数:{{user}}<span>使用次数：{{useNum}}</span></div>
     </div>
     <router-view v-if="checkIn"></router-view>
   </div>
@@ -15,11 +16,37 @@
   data(){
     return{
       checkIn:false,
+      user:0,
+      useNum:0,
+      isAdd:sessionStorage.getItem('yardman_usedata')||1
     }
+  },
+  beforeMount(){
+    sessionStorage.setItem('yardman_usedata',2);
+    console.log(this.isAdd)
+    this.$http({
+      url:'/api/sum',
+      method:'jsonp',
+      params:{
+        isAdd:this.isAdd
+      },
+      emulateJSON:true,
+    }).then(function(response){
+      console.log(response)
+      this.user=response.body.sum;
+      this.useNum=response.body.num;
+    },function(error){
+      alert('操作错误！');
+    }).catch(function(error){
+      alert('请求被拒绝！')
+    });
   },
   methods:{
     checkInChange:function(){
       this.checkIn=true;
+    },
+    getUsedata:function(){
+
     }
   }
 }
@@ -60,16 +87,6 @@
     z-index: 3;
   }
   #Student{position: relative;z-index: 3}
-  footer{
-    width: 100%;
-    height: 4%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    color:#fff;
-    background: #393939;
-    line-height: 34px;
-  }
   #entry{
     width: 100%;
     height: 100%;
@@ -116,6 +133,20 @@
     background: #0086cc;
     left: 55%;
     color: #fff;
+  }
+  #usedata{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #e8e8e8;
+    z-index: 100;
+    line-height: 30px;
+    padding: 2px 16px;
+    font-size: 14px;
+  }
+  #usedata span{
+    display: inline-block;
+    margin-left: 20px;
   }
 
 

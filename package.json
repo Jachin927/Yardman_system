@@ -59,5 +59,15 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "main": ".postcssrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jachin927/Yardman_system.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jachin927/Yardman_system/issues"
+  },
+  "homepage": "https://github.com/Jachin927/Yardman_system#readme"
 }
