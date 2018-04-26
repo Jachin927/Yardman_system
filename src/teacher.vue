@@ -9,9 +9,7 @@
           <span>您好，{{loginInfo.name}} <span id="loginout" @click="Logout()">注销</span> </span>
         </div>
       </div>
-      <ul id="side">
-        <!-- <li @click="changmenuId(0)" :class="{'focus':menuId===0}">答题系统</li> -->
-        <!-- <li class="focus">答题管理系统</li> -->
+      <div id="side">
         <transition name="slide-fade">
           <div class="bNav">
             <p><router-link to='/Teacher/Class' >班级管理</router-link></p>
@@ -22,7 +20,7 @@
             <p><router-link to='/Teacher/Watch'>实时监控</router-link></p>
           </div>
         </transition>
-      </ul>
+      </div>
       <div id="allContent">
         <router-view :power="power"></router-view>
       </div>

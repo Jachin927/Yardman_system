@@ -32,7 +32,7 @@
       },
       emulateJSON:true,
     }).then(function(response){
-      console.log(response)
+      // console.log(response)
       this.user=response.body.sum;
       this.useNum=response.body.num;
     },function(error){
@@ -72,6 +72,16 @@
   }
   input::-webkit-outer-spin-button {
   -webkit-appearance: none;
+  }
+  footer{
+    width: 100%;
+    height: 4%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color:#fff;
+    background: #393939;
+    line-height: 34px;
   }
 
   #app,#Teacher,#Student {
