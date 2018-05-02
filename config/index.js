@@ -12,16 +12,16 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/api':{
-            target: 'http://10.21.40.246/answer.php',
-            changeOrigin:false,
+            target: 'http://lostars.cn/answer.php',
+            changeOrigin:true,
             pathRewrite: {
               '^/api': '/'
               // 注：answerSystem/Type.vue的'image'和student.vue的'Typeimagebefore'设置了常量为跨域地址，更改地址时需前往页面修改！
             }
         },
         '/s_api':{
-            target: 'http://10.21.40.246/students.php',
-            changeOrigin:false,
+            target: 'http://lostars.cn/students.php',
+            changeOrigin:true,
             pathRewrite: {
               '^/s_api': '/'
             }
@@ -64,13 +64,13 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

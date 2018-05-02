@@ -5,7 +5,7 @@
       <div id="head">
         <h1>牧码人答题管理系统</h1>
         <div id="headUser">
-          <img src="./assets/logo.png" alt="找不到图片">
+          <!-- <img src="./assets/logo.png" alt="找不到图片"> -->
           <span>您好，{{loginInfo.name}} <span id="loginout" @click="Logout()">注销</span> </span>
         </div>
       </div>

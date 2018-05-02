@@ -120,7 +120,7 @@ props:['power'],
         body:data,
         emulateJSON:false,
 			}).then(function(response){
-				alert(response.body.slice(13,-3))
+				alert(response.body.slice(14,-3))
 				this.classListChange++
 	  	},function(error){
 	  		alert('操作错误！')

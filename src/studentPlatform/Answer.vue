@@ -146,7 +146,7 @@
   methods:{
   	changAnswerModel:function(num,check,val,selectInd){//判断对错
   		this.errorCheck=selectInd;
-  		console.log(this.errorCheck)
+  		// console.log(this.errorCheck)
 			if (check==this.QuestionList[val].right) {//答题正确
 	  		if (this.AnswertipNum!=this.QuestionSum) {//未答完题目
 	  			this.Answermodelshow=num;
@@ -299,7 +299,7 @@
 	        },
 	        emulateJSON:true,
 	      }).then(function(response){
-	      	console.log(response)
+	      	// console.log(response)
 	      	if (response.body.status==1) {
 	      		alert(response.body.msg);
 		      	this.$emit('returnIndex',this.AnswerVal);

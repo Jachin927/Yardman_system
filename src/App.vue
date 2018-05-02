@@ -23,7 +23,7 @@
   },
   beforeMount(){
     sessionStorage.setItem('yardman_usedata',2);
-    console.log(this.isAdd)
+    // console.log(this.isAdd)
     this.$http({
       url:'/api/sum',
       method:'jsonp',

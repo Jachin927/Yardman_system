@@ -149,7 +149,7 @@ export default {
 			}).then(function(response){
 				alert(response.body.slice(13,-3));
 				this.topicListChange++;
-				console.log(this.topicListChange)
+				// console.log(this.topicListChange)
 	  	},function(error){
 	  		alert('操作错误！')
 	  	}).catch(function(error){

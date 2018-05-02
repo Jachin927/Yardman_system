@@ -94,7 +94,7 @@ export default {
 			this.showChange=true;
 			this.change_typeName=name;
 			this.id=id;
-			this.image="http://10.21.40.246"+url;
+			this.image="http://lostars.cn"+url;
 			this.old_image=url;
 			// console.log(this.image)
 		},

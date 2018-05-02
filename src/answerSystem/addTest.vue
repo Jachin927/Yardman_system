@@ -339,7 +339,7 @@ export default {
   	},
   	// 已发布测试模块 删除
   	delTestDD:function(id,value){
-  		console.log(this.power)
+  		// console.log(this.power)
   		this.$http({
 				url:'/api/del/p_til',
 				method:'jsonp',
@@ -352,7 +352,7 @@ export default {
 			}).then(function(response){
 				alert(response.body.slice(1,-1));
 	    	this.testList.splice(value,1);
-	    	console.log(response)
+	    	// console.log(response)
 	  	},function(error){
 	  		alert('操作错误！')
 	  	}).catch(function(error){

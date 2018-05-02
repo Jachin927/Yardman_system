@@ -97,7 +97,7 @@ export default {
 			emulateJSON:true,
 		}).then(function(response){
 			this.scoreList=response.body;
-			console.log(response)
+			// console.log(response)
 		},function(error){
 			alert('操作错误！');
 		});
