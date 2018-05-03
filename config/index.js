@@ -15,7 +15,7 @@ module.exports = {
             target: 'http://lostars.cn/answer.php',
             changeOrigin:true,
             pathRewrite: {
-              '^/api': '/'
+              '^/api': ''
               // 注：answerSystem/Type.vue的'image'和student.vue的'Typeimagebefore'设置了常量为跨域地址，更改地址时需前往页面修改！
             }
         },
@@ -23,7 +23,7 @@ module.exports = {
             target: 'http://lostars.cn/students.php',
             changeOrigin:true,
             pathRewrite: {
-              '^/s_api': '/'
+              '^/s_api': ''
             }
         }
     },
